@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_120"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="all">
+
+    <ImageView
+        android:id="@+id/education_resource_img"
+        android:layout_width="@dimen/space_150"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/space_12"
+        android:background="@color/text_black_c"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,5:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/play_img"
+        android:layout_width="@dimen/space_40"
+        android:layout_height="@dimen/space_40"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="@+id/education_resource_img"
+        app:layout_constraintLeft_toLeftOf="@+id/education_resource_img"
+        app:layout_constraintRight_toRightOf="@+id/education_resource_img"
+        app:layout_constraintTop_toTopOf="@+id/education_resource_img" />
+
+    <TextView
+        android:id="@+id/video_duration_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/space_10"
+        android:layout_marginBottom="@dimen/space_3"
+        android:gravity="center"
+        android:text="25:25"
+        android:textColor="@color/text_black_9"
+        android:textSize="@dimen/text_size_11"
+        app:layout_constraintBottom_toBottomOf="@+id/education_resource_img"
+        app:layout_constraintRight_toRightOf="@+id/education_resource_img" />
+
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_15"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginEnd="@dimen/space_12"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="中共十九大顺利召开！召开中共十九大顺利召开！召开"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintLeft_toRightOf="@+id/education_resource_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/education_resource_img" />
+
+    <TextView
+        android:id="@+id/video_create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_15"
+        android:layout_marginBottom="@dimen/space_10"
+        android:text="2018-02-25 15:12"
+        android:textColor="@color/text_black_9"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintBottom_toBottomOf="@+id/education_resource_img"
+        app:layout_constraintLeft_toLeftOf="@+id/video_title" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/line_color_e5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/learn_finish_shadow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#78000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/education_resource_img"
+        app:layout_constraintLeft_toLeftOf="@id/education_resource_img"
+        app:layout_constraintRight_toRightOf="@+id/education_resource_img"
+        app:layout_constraintTop_toTopOf="@+id/education_resource_img" />
+
+    <TextView
+        android:id="@+id/education_learn_finish"
+        android:layout_width="@dimen/space_70"
+        android:layout_height="@dimen/space_26"
+        android:background="@drawable/education_have_learn_bg"
+        android:gravity="center"
+        android:text="已完成"
+        android:textColor="@color/text_black_4"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/education_resource_img"
+        app:layout_constraintLeft_toLeftOf="@id/education_resource_img"
+        app:layout_constraintRight_toRightOf="@+id/education_resource_img"
+        app:layout_constraintTop_toTopOf="@+id/education_resource_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_90"
+    android:paddingStart="@dimen/space_12"
+    android:paddingEnd="@dimen/space_12">
+
+    <View
+        android:id="@+id/guide_line"
+        android:layout_width="@dimen/space_1"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="386dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/education_type"-->
+        <!--android:layout_width="@dimen/space_40"-->
+        <!--android:layout_height="@dimen/space_40"-->
+        <!--android:background="@drawable/education_type_img_bg_one"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@color/education_type_color_one"-->
+        <!--android:textSize="@dimen/text_size_12"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/education_title"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--tools:text="@string/education_type_one" />-->
+
+    <ImageView
+        android:id="@+id/education_type"
+        android:layout_width="@dimen/space_40"
+        android:layout_height="@dimen/space_40"
+        android:background="@drawable/wdbfmxi_video_icon"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/education_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/education_type_one" />
+
+    <TextView
+        android:id="@+id/education_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_black_4"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintBottom_toTopOf="@+id/guide_line"
+        app:layout_constraintLeft_toRightOf="@+id/education_type"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="@string/education_type_one" />
+
+    <TextView
+        android:id="@+id/education_learn_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:textColor="@color/text_black_9"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintLeft_toRightOf="@+id/education_type"
+        app:layout_constraintTop_toBottomOf="@+id/guide_line"
+        tools:text="07-18 20:10" />
+
+    <TextView
+        android:id="@+id/education_learn_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_black_9"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_line"
+        tools:text="2小时" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/line_color_e5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

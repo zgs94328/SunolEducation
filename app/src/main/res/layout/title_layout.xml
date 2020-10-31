@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><!--如果有不同的头部布局，请不要在这里改，使用新的布局就行了-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_title_height"
+    android:background="@color/main_theme_color"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_Title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_17"
+        android:textStyle="bold"
+        tools:text="这里是头部" />
+
+    <TextView
+        android:id="@+id/btn_back"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/online_edu_return"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ripple_bg"
+        android:gravity="center"
+        android:minWidth="@dimen/space_44"
+        android:paddingLeft="@dimen/space_15"
+        android:paddingRight="@dimen/space_15"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/right_img"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:minWidth="@dimen/space_44"
+        android:paddingBottom="@dimen/space_12"
+        android:paddingTop="@dimen/space_12"
+        android:src="@drawable/ripple_bg"
+        android:visibility="invisible" />
+</RelativeLayout>

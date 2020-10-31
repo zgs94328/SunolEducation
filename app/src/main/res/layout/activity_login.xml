@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="all">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_80"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_20"
+            android:layout_marginStart="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_300"
+            android:background="@drawable/login_layout_bg"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/user_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_30"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="用户名"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.yangguangyulu.sunoleducation.view.CustomEditText
+                android:id="@+id/user_id_card"
+                style="@style/base_edit_style"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_40"
+                android:layout_marginEnd="@dimen/space_20"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_5"
+                android:background="@drawable/white_line_input_bg"
+                android:digits="0123456789Xx"
+                android:hint="请输入用户名"
+                android:maxLength="18"
+                android:paddingEnd="@dimen/space_10"
+                android:paddingStart="@dimen/space_10"
+                android:textColorHint="@color/text_black_c"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_name_title" />
+
+            <TextView
+                android:id="@+id/password_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_30"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="密码"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_id_card" />
+
+            <com.yangguangyulu.sunoleducation.view.CustomEditText
+                android:id="@+id/user_password"
+                style="@style/base_edit_style"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_40"
+                android:layout_marginEnd="@dimen/space_20"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_5"
+                android:background="@drawable/white_line_input_bg"
+                android:digits="@string/input_digits"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:maxLength="6"
+                android:paddingEnd="@dimen/space_10"
+                android:paddingStart="@dimen/space_10"
+                android:textColorHint="@color/text_black_c"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_title" />
+
+            <ImageView
+                android:id="@+id/password_eye_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jd_eyes_nor"
+                app:layout_constraintBottom_toBottomOf="@+id/user_password"
+                app:layout_constraintRight_toRightOf="@+id/user_password"
+                app:layout_constraintTop_toTopOf="@+id/user_password" />
+
+            <TextView
+                android:id="@+id/verify_code_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_30"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="验证码"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_password" />
+
+            <com.yangguangyulu.sunoleducation.view.CustomEditText
+                android:id="@+id/verify_code_et"
+                style="@style/base_edit_style"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_40"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_5"
+                android:background="@drawable/white_line_input_bg"
+                android:digits="@string/input_digits"
+                android:hint="请输入验证码"
+                android:maxLength="6"
+                android:paddingEnd="@dimen/space_10"
+                android:paddingStart="@dimen/space_10"
+                android:textColorHint="@color/text_black_c"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/verify_code_img"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/verify_code_title" />
+
+            <ImageView
+                android:id="@+id/verify_code_img"
+                android:layout_width="@dimen/space_80"
+                android:layout_height="@dimen/space_30"
+                android:layout_marginEnd="@dimen/space_20"
+                android:layout_marginStart="@dimen/space_5"
+                app:layout_constraintBottom_toBottomOf="@+id/verify_code_et"
+                app:layout_constraintLeft_toRightOf="@+id/verify_code_et"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/verify_code_et" />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_40"
+                android:layout_marginBottom="@dimen/space_15"
+                android:layout_marginEnd="@dimen/space_20"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_30"
+                android:background="@drawable/login_btn_bg"
+                android:elevation="0dp"
+                android:enabled="false"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/verify_code_et" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="230dp"
+    android:layout_height="@dimen/space_150"
+    android:layout_gravity="center"
+    android:background="@drawable/custom_toast_bg"
+    android:gravity="center_horizontal"
+    android:minHeight="@dimen/space_150"
+    android:minWidth="230dp"
+    android:orientation="vertical"
+    tools:ignore="all">
+
+    <ImageView
+        android:id="@+id/top_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:src="@drawable/default_toast_top_img"/>
+
+    <TextView
+        android:id="@+id/toast_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_25"
+        android:text="绑定成功"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/text_size_16"/>
+
+</LinearLayout>

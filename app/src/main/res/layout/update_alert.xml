@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/space_300"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/alert_bg"
+    android:orientation="vertical"
+    tools:ignore="all">
+
+    <com.yangguangyulu.sunoleducation.widget.RoundImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/space_50"
+        android:layout_height="@dimen/space_50"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_25"
+        android:contentDescription="@null"
+        android:src="@mipmap/sun_edu_icon"
+        app:type="round" />
+
+    <com.yangguangyulu.sunoleducation.widget.roundcornprogressbar.RoundCornerProgressBar
+        android:id="@+id/progress_pb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_10"
+        android:layout_below="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_30"
+        android:visibility="visible"
+        app:rcBackgroundColor="#fbcdaf"
+        app:rcBackgroundPadding="0dp"
+        app:rcBackgroundRadius="5dp"
+        app:rcMax="100"
+        app:rcProgress="0"
+        app:rcProgressColor="#f4ad3b" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_pb"
+        android:layout_marginBottom="@dimen/space_25"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_20"
+            android:text="下载中，请稍等..."
+            android:textColor="#672106"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_30"
+            android:layout_marginRight="@dimen/space_30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/progress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                android:textColor="#672106"
+                tools:text="0%" />
+
+            <TextView
+                android:id="@+id/apk_size_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                android:gravity="center|end"
+                android:textColor="#672106"
+                tools:text="18MB" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

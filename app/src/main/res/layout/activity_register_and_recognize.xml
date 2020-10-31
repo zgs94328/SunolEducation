@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/btn_back"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/back"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_100"
+        android:text="抬起手机，对准相框"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/space_30" />
+
+    <com.yangguangyulu.sunoleducation.view.MySurfaceView
+        android:id="@+id/texture_preview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/circle" />
+
+</RelativeLayout>

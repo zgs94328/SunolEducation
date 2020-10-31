@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:background="@color/main_theme_color"
+        app:layout_constraintBottom_toTopOf="@+id/learn_info_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="@dimen/space_44"
+            android:layout_height="@dimen/space_44"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="126dp"
+            android:src="@drawable/online_edu_return"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toStartOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_48"
+            android:gravity="center_vertical"
+            android:text="我的学习"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/select_time"
+            android:layout_width="@dimen/space_60"
+            android:layout_height="@dimen/space_25"
+            android:layout_marginEnd="@dimen/space_12"
+            android:background="@drawable/my_course_select_time_bg"
+            android:drawableEnd="@drawable/button_triangle"
+            android:gravity="center"
+            android:paddingEnd="@dimen/space_5"
+            android:text="选择时间"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/learn_info_layout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_112"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="@dimen/space_10"
+        android:background="@drawable/course_learn_info_unfinished_bg"
+        app:layout_constraintBottom_toTopOf="@+id/frl_my_course"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <ImageView
+            android:id="@+id/info_img"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="@dimen/space_48"
+            android:layout_marginStart="@dimen/space_12"
+            android:src="@drawable/wdxxi_title_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/guide_line"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginBottom="@dimen/space_1"
+            android:textColor="@color/text_black_4"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guide_line"
+            app:layout_constraintLeft_toRightOf="@+id/info_img"
+            tools:text="本月" />
+
+        <TextView
+            android:id="@+id/have_learn_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:textColor="@color/text_black_4"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintLeft_toLeftOf="@+id/month"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line"
+            tools:text="已学习：4小时30分" />
+
+        <TextView
+            android:id="@+id/learn_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_15"
+            android:textColor="@color/my_edu_unfinish_text_color"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="未完成" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frl_my_course"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learn_info_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

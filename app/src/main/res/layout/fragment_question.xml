@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_question_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_question_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_40"
+        android:paddingLeft="@dimen/space_25"
+        android:paddingRight="@dimen/space_25"
+        android:textColor="#ff333333"
+        android:textSize="15dp"
+        tools:text="我周围的人往往觉得我对自己的看法有些矛盾。" />
+
+    <RadioGroup
+        android:id="@+id/rg_question_option"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_40"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_25"
+        android:paddingRight="@dimen/space_25">
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_12"
+        android:layout_marginRight="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_50"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_35"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_marginRight="@dimen/space_12"
+            android:layout_weight="1"
+            android:background="@color/main_theme_color"
+            android:text="上一题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_15" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_commit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_35"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_marginRight="@dimen/space_12"
+            android:layout_weight="1"
+            android:background="@color/main_theme_color"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_15" />
+
+    </LinearLayout>
+</LinearLayout>

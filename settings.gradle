@@ -1,0 +1,3 @@
+include ':faceplatform-ui'
+include ':faceplatform'
+include ':app',':videoplayer'

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yangguangyulu.sunoleducation.widget.LandLayoutVideo
+        android:id="@+id/detail_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_img"
+        android:layout_width="@dimen/space_45"
+        android:layout_height="@dimen/space_45"
+        android:layout_marginTop="@dimen/space_25"
+        android:src="@drawable/back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/education_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginEnd="@dimen/space_15"
+                android:lineSpacingExtra="@dimen/space_3"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="热烈庆祝中共中央十九大在京顺利召开，习近平总书记讲话" />
+
+            <TextView
+                android:id="@+id/education_video_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_18"
+                android:layout_marginTop="@dimen/space_5"
+                android:background="@drawable/education_detail_duration_bg"
+                android:drawableStart="@drawable/icon_time"
+                android:drawablePadding="@dimen/space_5"
+                android:gravity="center"
+                android:paddingStart="@dimen/space_8"
+                android:paddingEnd="@dimen/space_8"
+                android:textColor="@color/text_selected_color"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintLeft_toLeftOf="@+id/education_title"
+                app:layout_constraintTop_toBottomOf="@+id/education_title"
+                tools:text="20:35" />
+
+            <TextView
+                android:id="@+id/education_video_upload_time"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:textColor="@color/text_black_9"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="@+id/education_video_duration"
+                app:layout_constraintRight_toRightOf="@+id/education_title"
+                app:layout_constraintTop_toTopOf="@+id/education_video_duration"
+                tools:text="2018-02-05 15:21" />
+
+            <TextView
+                android:id="@+id/education_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintLeft_toLeftOf="@+id/education_title"
+                app:layout_constraintRight_toLeftOf="@+id/vertical_arrow_layout"
+                app:layout_constraintTop_toBottomOf="@+id/education_video_duration"
+                tools:text="热烈庆祝中共中央十九大在京顺利召开，习近平总书记讲话" />
+
+            <LinearLayout
+                android:id="@+id/vertical_arrow_layout"
+                android:layout_width="@dimen/space_25"
+                android:layout_height="@dimen/space_25"
+                android:layout_marginTop="@dimen/space_12"
+                android:gravity="end"
+                android:paddingTop="@dimen/space_5"
+                app:layout_constraintLeft_toRightOf="@+id/education_description"
+                app:layout_constraintRight_toRightOf="@+id/education_title"
+                app:layout_constraintTop_toBottomOf="@+id/education_video_duration">
+
+                <ImageView
+                    android:id="@+id/vertical_arrow_img"
+                    android:layout_width="@dimen/space_18"
+                    android:layout_height="@dimen/space_18"
+                    android:src="@drawable/icon_more_up" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/middle_line"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_05"
+                android:layout_marginTop="@dimen/space_15"
+                android:background="@color/line_color_e5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/education_description" />
+
+            <TextView
+                android:id="@+id/recommend_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="为您推荐"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_17"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/education_title"
+                app:layout_constraintTop_toBottomOf="@+id/middle_line" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_tip" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/empty_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_200"
+                android:background="@color/background_bg"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recycler_view">
+
+
+                <TextView
+                    android:id="@+id/empty_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:drawableTop="@drawable/anonymous"
+                    android:text="暂无推荐资源"
+                    android:textColor="@color/text_black_9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

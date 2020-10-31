@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">阳光在线EducationOnline</string>
+
+    <string name="app_description">SunOlEduLib</string>
+    <string name="loading">加载中</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="more_data">加载更多</string>
+    <string name="no_data_to_load">暂无数据</string>
+    <string name="data_loading">加载中&#8230;</string>
+
+    <!-- PullToRefreshRecyclerView   Start -->
+    <string name="release_refresh">释放立即刷新</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="refreshing">正在刷新</string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="load_more_fail">加载失败</string>
+    <!-- PullToRefreshRecyclerView   End -->
+
+    <!-- WheelPicker start-->
+    <string name="Year">年</string>
+    <string name="Month">月</string>
+    <string name="Day">日</string>
+    <!-- WheelPicker end-->
+
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="app_exit">再按一次退出</string>
+
+    <string name="input_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="init_failed">引擎初始化失败，错误码为 %d</string>
+    <string name="permission_denied">权限被拒绝！</string>
+
+    <string name="education_type_one">法制\n教育</string>
+
+    <string name="has_update_version">您有新版本(%s)未更新，请及时下载更新！</string>
+
+</resources>
